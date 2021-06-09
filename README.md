@@ -1,5 +1,33 @@
 # xp_CAPTCHA(白嫖版)
 
+### m1n9yu3 个人升级部分
+
+flask 多线程， 否则原始http 请求库 会阻塞页面， 影响到验证码识别
+
+
+打包成 docker 镜像
+
+```shell
+docker pull m1n9yu3/centos-xp-captcha:1.0
+```
+
+
+端口映射 8899 出去
+
+
+进入 容器， 运行 
+
+```shell
+python3 server2.py
+```
+
+后台运行
+```shell
+nohup python3 server2.py
+```
+
+
+
 ### 更新2.0
 
 新增加了个保存最新的50个验证码及结果
